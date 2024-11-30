@@ -1,10 +1,11 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  root: './src', // Si votre code React se trouve dans le dossier `src`
   build: {
-    chunkSizeWarningLimit: 1000, // augmente la limite à 1000 Ko ou plus si nécessaire
+    outDir: '../dist', // Sortie dans un dossier `dist` à la racine du projet
   },
-})
+  server: {
+    open: true, // Ouvrir automatiquement le navigateur pendant le développement
+  },
+});
