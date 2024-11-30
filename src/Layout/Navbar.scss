@@ -1,0 +1,48 @@
+.navbar {
+
+    display: flex;
+    align-items: center;
+    color: #000000;
+    font-weight: bold;
+    gap: 2rem;
+    width: 86%;
+    margin: auto;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+
+    @media screen and (width <=768px) {
+        width: 90%;
+        margin-top: 1rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 12px;
+        gap: 1.5rem;
+
+
+    }
+
+    &>*:first-child {
+        margin-right: auto;
+
+        img {
+            width: 210.5px;
+
+            @media screen and (width <=768px) {
+                width: 145px;
+            }
+        }
+    }
+
+    & a {
+        text-decoration: none;
+        color: #000000;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &.active {
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+    .description_panel {
+        flex-basis: 50%;
+        overflow: hidden;
+        margin-bottom: 10px;
+
+        & .description_content {
+            margin-inline: 1.5rem;
+            font-weight: 500;
+            position: relative;
+            z-index: -1;
+            overflow: hidden;
+            max-height: 0; // Contenu initialement caché
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+            &.show {
+                max-height: 1000px; // Ajustez selon la taille de votre contenu
+                opacity: 1;
+                transform: translateY(0);
+                margin-bottom: 3rem;
+            }
+
+
+            &.hide {
+                max-height: 0;
+                opacity: 0;
+                transform: translateY(-120%);
+            }
+
+
+            & li {
+
+                display: flex;
+
+            }
+        }
+
+        @media screen and (width <=768px) {}
+
+        .description_header {
+            background-color: #FF6060;
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+            padding-left: 0.5rem;
+            border-radius: 0.5rem;
+            padding: 0.6rem 0.7rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0;
+            cursor: pointer;
+
+            i {
+                font-size: 20px;
+                transition: transform 0.3s ease-in-out;
+            }
+
+            // Chevron par défaut pointe vers le bas (0 degrés)
+            .rotate-down {
+                transform: rotate(0deg);
+            }
+
+            // Chevron après clic pointe vers le haut (180 degrés)
+            .rotate-up {
+                transform: rotate(180deg);
+            }
+        }
+
+
+        .apartment_content {
+            color: black;
+
+        }
+
+    }

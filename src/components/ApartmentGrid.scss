@@ -1,0 +1,39 @@
+.grid {
+    background-color: #F6F6F6;
+    // min-height: 108vh;
+    border-radius: 2rem;
+    width: 100%;
+    margin: 3rem 0;
+    display: flex;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+    align-items: baseline;
+
+    &>* {
+        width: 100%;
+        max-width: 340px;
+
+        @media screen and (width <=882px) {
+            max-width: 600rem
+        }
+
+        @media screen and (width <=768px) {
+            max-width: 600rem
+        }
+    }
+
+    @media screen and (width <=768px) {
+
+        background-color: white;
+        margin: 2rem 0;
+        padding-top: 0;
+        gap: 2rem;
+        padding-bottom: 0;
+
+
+
+    }
+}

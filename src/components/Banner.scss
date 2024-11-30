@@ -1,0 +1,65 @@
+.banner {
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5625rem;
+    width: 100%;
+    min-height: 223px;
+    color: white;
+    margin: auto;
+    background-image: url('src/assets/images/imgAccueil.png');
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    box-shadow: 0px 4px 5px #0000005c;
+
+    @media screen and (width <=768px) {
+        justify-content: flex-start;
+
+    }
+
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        /* Superposition noire à 60% d'opacité */
+        border-radius: 1.5625rem;
+        z-index: -1;
+        /* La superposition et l'image de fond restent derrière le contenu */
+    }
+
+    & h1 {
+        font-weight: 700;
+        font-size: 48px;
+
+    }
+
+    @media screen and (width <=866px) {
+        h1 {
+            padding-left: 1rem;
+
+
+        }
+
+    }
+
+    @media screen and (width <=768px) {
+        h1 {
+            width: 73%;
+            font-size: 24px;
+            padding-left: 1rem;
+
+
+        }
+
+    }
+
+
+}

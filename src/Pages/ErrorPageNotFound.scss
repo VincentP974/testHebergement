@@ -1,0 +1,35 @@
+.error-page {
+    color: #FF6060;
+    text-align: center;
+    margin-bottom: 8rem;
+
+
+
+    h1 {
+        font-size: 230px;
+        font-weight: 700;
+        margin-block: 0;
+
+        @media screen and (width <=768px) {
+            font-size: 96px;
+
+
+        }
+    }
+
+    h2 {
+        font-size: 36px;
+        font-weight: 500;
+        padding-bottom: 4rem;
+
+        @media screen and (width <=768px) {
+            font-size: 18px;
+
+        }
+    }
+
+    a {
+        color: black;
+        font-weight: 500;
+    }
+}
